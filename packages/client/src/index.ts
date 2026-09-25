@@ -450,3 +450,17 @@ export {
   type ParsedError,
 } from './errors.js';
 export { createErrorParserMiddleware } from './error-parser-middleware.js';
+
+// Pagination helpers — async generators for cursor-based list endpoints
+export {
+  paginateCursor,
+  paginateAll,
+  collectPaginated,
+  forEachPaginated,
+  takePaginated,
+  type CursorPageFetcher,
+  type CursorPaginationOptions,
+} from './pagination-helpers.js';
+
+// Re-export the simple pagination serialization utilities
+export { serializePaginationParams, unwrapPaginatedResponse } from './pagination.js';
